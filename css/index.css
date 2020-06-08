@@ -1,53 +1,60 @@
-div {
-        width: 100%;
-        height: 600px;
-    }
-.First{
-width:33.3%;
-height: 600px;
-float:left;
-border : 3px solid #7DD8A9;
-box-sizing: border-box;
+body {
+  background-color: #24292e;
+  color: white;
 }
-.up {
-width:100%;
-height: 50%;
-float:left;
-border : 3px solid #7DD8A9;
-box-sizing: border-box;
-background-color: #DBFBEB;
+header {
+  margin: 150px 0 50px 0;
+  font-size: 30px;
+  text-align: center;
+  user-select: none;
 }
-.down {
-width:100%;
-height: 50%;
-float:left;
-border : 3px solid #7DD8A9;
-box-sizing: border-box;
-background-color: #DBFBEB;
+section {
+  width: 500px;
+  margin: 0 auto;
+  background-color: gray;
 }
-.Second{
-width:33.3%;
-height: 600px;
-float:left;
-border : 3px solid #7DD8A9;
-box-sizing: border-box;
-background-color: #DBFBEB;
+.todo-form input {
+  width: 100%;
+  height: 33px;
+  line-height: 33px;
+  padding: 0 10px;
+  border: 0;
+  outline: none;
 }
-.Third{
-width:33.3%;
-height: 600px;
-float:left;
-border : 3px solid #7DD8A9;
-box-sizing: border-box;
-background-color: #DBFBEB;
+.todo-ul {
+  width: 100%;
+  overflow: auto;
 }
-.upload{
-	position: relative;
-	left:20pt;
-	top: 20pt;
+.todo-ul li {
+  position: relative;
+  height: 33px;
+  line-height: 33px;
 }
-.toDoForm{
-	position: relative;
-	left:20pt;
-	top: 20pt;
+.todo-ul li span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-overflow: ellipsis;
+  padding-left: 27px;
+  padding-top: 2px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.del-btn {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid black;
+  border-radius: 15px;
+  background: none;
+  cursor: pointer;
+}
+.del-btn:hover {
+  background: black;
+}
+footer {
+  height: 150px;
 }
