@@ -8,7 +8,30 @@ let todo = [];
   loadTodo();
   todoFormEl.addEventListener(`submit`, handleSubmit);
   todoEl.focus();
+  changeText();
 })();
+
+function changeText() {
+  const textEl = document.querySelector(`.change-form textarea`);
+  const formEl = document.querySelector(`.change-form`);
+
+  formEl.addEventListener(`submit`, (evt) => {
+    const { value } = textEl;
+
+    evt.preventDefault();
+    if (value.length) {
+      const arr = textEl.value.split(`-`);
+
+      arr.forEach((item) => {
+        if (item.trim().length) {
+          paintTodo(item.trim().replace(/\n/g, ""));
+          textEl.value = ``;
+        }
+      });
+    }
+    textEl.focus();
+  });
+}
 
 function loadTodo() {
   const loadedTodo = localStorage.getItem(NAME);
